@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+</head>
+<body>
+	<p>this is admin</p>
+        <form th:action="@{/admin/menuItems}" method="post">
+            <div><label> Item Name : <input type="text" name="itemName"/> </label></div>
+            <div><label> Item Price: <input type="text" name="itemPrice"/> </label></div>
+            <div><input type="submit" name ="action" value="Add"/></div>
+            <div><input type="submit" name ="action" value="Delete"/></div>
+            <div><input type="submit" name ="action" value="Find"/></div>
+        </form><br/> <br/>
+        <form th:action="@{/login}" method="POST">
+        	<input type="submit" value="logout"/>
+        </form>
+</body>
+</html> 
